@@ -1,11 +1,18 @@
 package com.cybertek.tests.vytrack;
-/*
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+/*
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+*/
 public class Vytrack_Login {
 
     public static void main(String[] args) {
@@ -27,8 +34,7 @@ public class Vytrack_Login {
         }
 
 
-
+        driver.close();
     }
 
 }
-*/
