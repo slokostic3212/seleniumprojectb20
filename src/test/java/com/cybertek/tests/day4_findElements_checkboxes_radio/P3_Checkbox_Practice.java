@@ -6,32 +6,31 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class P3_Checkbox_Practice {
-    public static void main(String[] args) {
-        //Practice:	Cybertek	Checkboxes
-        // 1.Go	to	http://practice.cybertekschool.com/checkboxes
+    public static void main(String[] args) throws InterruptedException {
+        //Practice: Cybertek Checkboxes
+        //1. Go to http://practice.cybertekschool.com/checkboxes
         WebDriver driver = WebDriverFactory.getDriver("chrome");
         driver.get("http://practice.cybertekschool.com/checkboxes");
 
-        //locating first checkbox
-        WebElement checkbox1 = driver.findElement(By.xpath("//form[@id='checkboxes']/input[1]"))
+        //Locating the first checkbox
+        WebElement checkbox1 = driver.findElement(By.xpath("//form[@id='checkboxes']/input[1]"));
 
-        //locating secoond checkbox
+        //Locating the second checkbox
         WebElement checkbox2 = driver.findElement(By.xpath("//form[@id='checkboxes']/input[2]"));
 
-        // 2.Confirm	checkbox	#1	is	NOT	selected	by	default
+        //2. Confirm checkbox #1 is NOT selected by default
         if (!checkbox1.isSelected()){
-            System.out.println("Checkbox is not selected. Verification PASSED!");
+            System.out.println("Checkbox 1 is not selected. Verification PASSED!");
         }else{
-            System.out.println("Checkbox is selected. Verification FAILED!!!");
+            System.out.println("Checkbox 1 is selected. Verification FAILED!!!");
         }
 
-        // 3.Confirm	checkbox	#2	is	SELECTED	by	default.
+        //3. Confirm checkbox #2 is SELECTED by default.
         if (checkbox2.isSelected()){
             System.out.println("Checkbox 2 is selected. Verification PASSED!");
         }else{
             System.out.println("Checkbox 2 is not selected. Verification FAILED!!!");
         }
-
 
         //4. Click checkbox #1 to select it.
         Thread.sleep(1000);
@@ -54,5 +53,21 @@ public class P3_Checkbox_Practice {
         }else{
             System.out.println("Checkbox 2 is selected. Verification FAILED!!!");
         }
+
+        WebElement homeLink = driver.findElement(By.xpath("//a[.='Home']"));
+
+        //homeLink.click();
+
+        //Thread.sleep(1000);
+
+        ///driver.navigate().back();
+
+        Thread.sleep(1000);
+
+        driver.navigate().refresh();
+
+        checkbox1 = driver.findElement(By.xpath("//form[@id='checkboxes']/input[1]"));
+
+        checkbox1.click();
     }
 }
