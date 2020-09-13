@@ -1,4 +1,4 @@
-package com.cybertek.tests.day5_testNG_into_dropdowns;
+package com.cybertek.tests.day5_testNG_intro_dropdowns;
 
 import com.cybertek.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
