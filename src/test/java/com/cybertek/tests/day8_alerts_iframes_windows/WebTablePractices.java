@@ -27,4 +27,9 @@ public class WebTablePractices {
        SmartBearUtilities.verifyOrder(driver,"Mark Smith");
        // SmartBearUtilities.verifyOrder(driver, "Mark Smiths");
     }
+    //using the printNamesAndCities method to print all names and their cities
+    @Test
+    public void task5_print_names_and_cities(){
+        SmartBearUtilities.printNamesAndCities(driver);
+    }
 }
