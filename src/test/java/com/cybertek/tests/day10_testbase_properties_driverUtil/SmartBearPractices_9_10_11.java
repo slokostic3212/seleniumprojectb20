@@ -11,6 +11,7 @@ import org.testng.annotations.Test;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.List;
+import java.util.Properties;
 
 public class SmartBearPractices_9_10_11 extends TestBase {
 
