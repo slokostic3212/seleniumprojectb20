@@ -38,10 +38,12 @@ import java.util.concurrent.TimeUnit;
             public void clickMessage(){
                 WebElement message = driver.findElement(By.xpath("//span[.='Message']"));
                 message.click();
+                BrowserUtils.wait(2);
 
                 WebElement topicIcon = driver.findElement(By.xpath("//span[@title='Topic']"));
                 topicIcon.click();
-
+                BrowserUtils.wait(2);
+                
                 WebElement TopicBlock = driver.findElement(By.xpath("//input[@class='feed-add-post-inp feed-add-post-inp-active']"));
                 TopicBlock.click();
 
