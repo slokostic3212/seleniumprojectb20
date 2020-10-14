@@ -76,6 +76,5 @@ public class JavaScriptExecutor_Practices {
 
 
 
-
     }
 }
