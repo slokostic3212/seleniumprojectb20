@@ -5,6 +5,7 @@ import com.cybertek.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
@@ -13,7 +14,7 @@ public class LibraryAutomation {
 
     WebDriver driver;
 
-    @Test
+    @BeforeMethod
     public void setUpMethod() {
         driver = WebDriverFactory.getDriver("chrome");
         driver.manage().window().maximize();
@@ -32,4 +33,17 @@ public class LibraryAutomation {
         BrowserUtils.wait(2);
 
     }
+    @Test
+    public void clickBooks(){
+        WebElement books = driver.findElement(By.xpath("//span[.='Books']"));
+        books.click();
+
+        BrowserUtils.wait(2);
+
+        WebElement tabAdd = driver.findElement(By.xpath("//a[@class='btn btn-lg btn-outline btn-primary btn-sm add_book_btn']"));
+        tabAdd.click();
+
+         BrowserUtils.wait(2);
+    }
+
 }
