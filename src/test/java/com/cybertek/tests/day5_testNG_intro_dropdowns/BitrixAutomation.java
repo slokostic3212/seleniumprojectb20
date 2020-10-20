@@ -31,23 +31,24 @@ import java.util.concurrent.TimeUnit;
                 WebElement loginButton = driver.findElement(By.xpath("//input[@value='Log In']"));
                 loginButton.click();
 
-                BrowserUtils.wait(2);
+                BrowserUtils.wait(4);
             }
 
             @Test
             public void clickMessage(){
                 WebElement message = driver.findElement(By.xpath("//span[.='Message']"));
                 message.click();
-                BrowserUtils.wait(2);
+                BrowserUtils.wait(4);
 
                 WebElement topicIcon = driver.findElement(By.xpath("//span[@title='Topic']"));
                 topicIcon.click();
-                BrowserUtils.wait(2);
+                BrowserUtils.wait(4);
                 
                 WebElement TopicBlock = driver.findElement(By.xpath("//input[@class='feed-add-post-inp feed-add-post-inp-active']"));
                 TopicBlock.click();
 
-                BrowserUtils.wait(2);
+                BrowserUtils.wait(4);
+                driver.close();
 
             }
 
