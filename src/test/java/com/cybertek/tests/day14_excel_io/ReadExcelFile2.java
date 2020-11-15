@@ -4,7 +4,8 @@ import org.apache.poi.ss.usermodel.*;
 import java.io.File;
 import java.io.IOException;
 import java.util.Iterator;
-public class ReadExcelFile {
+
+public class ReadExcelFile2 {
     public static void main(String[] args) throws IOException {
         String path = "vytrack_testusers.xlsx";
         File file = new File(path);
