@@ -44,5 +44,13 @@ public class ReadExcelFile {
             }
             System.out.println();
         }
+        System.out.println("####################WITH FOR EACH LOOP");
+
+        for (Row row : sheet) {
+            for (Cell cell : row) {
+                System.out.printf("%15s  ", cell.getStringCellValue());
+            }
+            System.out.println();
+        }
     }
 }
